@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>小程序商店</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h2>小程序商店</h2>
+	</header>
+
+	<!-- <nav class="kind-nav">
+		<ul class="clearfix" id="js-listBox">
+			<li>全部</li>
+			<li>生活</li>
+			<li>学习</li>
+			<li>生活</li>
+			<li>学习</li>
+			<li>生活</li>
+			<li>学习</li>
+			<li>生活</li>
+			<li>学习</li>
+			<li>生活</li>
+			<li>学习</li>
+			<li>生活</li>
+			<li>学习</li>
+		</ul>
+		<a id="js-more" class="btn btn-more">
+			<img src="images/more_unfold.png" alt="">
+		</a>
+	</nav> -->
+
+	<div class="container">
+		<ul class="list-box" id="js-list">
+			<li class="data-li" data-appid="VWGAepsb7L5488q2rMMz6A">
+				<img src="images/727_1484201163.jpg" alt="恋人清单">
+				<div class="app-content">
+					<h3>恋人清单</h3>
+					<p class="appinfo">为情侣们提供两人间的私密清单，将你们美好的爱情记录其中</p>
+					<p class="c-tx1">5213人使用<span> ・  </span>工具</p>
+				</div>
+				<button class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="恋人清单1">复制</button>
+				<img data-url="1.jpg" src="images/QRCode.png" alt="二维码" class="code">	
+			</li>
+			<li class="data-li" data-appid="VWGAepsb7L5488q2rMMz6A">
+				<img src="images/727_1484201163.jpg" alt="恋人清单">
+				<div class="app-content">
+					<h3>恋人清单</h3>
+					<p class="appinfo">为情侣们提供两人间的私密清单，将你们美好的爱情记录其中</p>
+					<p class="c-tx1">5213人使用<span> ・  </span>工具</p>
+				</div>
+				<button class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="恋人清单2">复制</button>
+				<img  data-url="1.jpg" src="images/QRCode.png" alt="二维码" class="code">	
+			</li>
+			<li class="data-li" data-appid="VWGAepsb7L5488q2rMMz6A">
+				<img src="images/727_1484201163.jpg" alt="恋人清单">
+				<div class="app-content">
+					<h3>恋人清单</h3>
+					<p class="appinfo">为情侣们提供两人间的私密清单，将你们美好的爱情记录其中</p>
+					<p class="c-tx1">5213人使用<span> ・  </span>工具</p>
+				</div>
+				<button class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="恋人清单3">复制</button>
+				<img  data-url="1.jpg" src="images/QRCode.png" alt="二维码" class="code">	
+			</li>
+		</ul>
+	</div>
+
+	<div id="js-large-code" class="large">
+		<img src="images/1.jpg" alt="二维码">
+	</div>
+	<script src="script/common.js"></script>
+	<script src="script/clipboard.min.js"></script>
+	<!-- <script src="script/toggle.js"></script> -->
+	<script>
+		var clipboard=new Clipboard(".clip-btn");
+		clipboard.on('success', function(e) {
+			alert("已复制“"+e.text+"”,直接到微信粘贴搜索即可");
+			console.info('Action:', e.action);
+			console.info('Text:', e.text);
+			console.info('Trigger:', e.trigger);
+
+			e.clearSelection();
+		});
+
+		clipboard.on('error', function(e) {
+			console.error('Action:', e.action);
+			console.error('Trigger:', e.trigger);
+		});
+	</script>
+	<script>
+		var listBox=document.getElementById('js-list');
+		listBox.onclick=function(e){
+			// e.stopPropagation();
+			var obj=e.target;
+			if (hasClass(obj,'code')) {
+				var parent=document.getElementById('js-large-code');
+				var url=obj.dataset.url;
+				var img="<img src='images/"+url+"' alt='二维码'>";
+				parent.innerHTML=img;
+				addClass(parent,"active");
+			}else{
+				console.log("无二维码");
+			}
+		}
+
+		document.body.onclick=function(e){
+			var obj=e.target;
+			if (!hasClass(obj,'code')){
+				var large=document.getElementById('js-large-code');
+				if (hasClass(large,'active')) {
+					removeClass(large,'active');
+				}
+			}
+			
+		}
+	</script>
+</body>
+</html>

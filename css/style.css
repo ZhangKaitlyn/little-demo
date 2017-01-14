@@ -1,0 +1,138 @@
+html,body{
+	min-height: 100%;
+}
+body{
+	display: inline-block;
+	width: 100%;
+}
+p{
+	margin: 0;
+}
+header h2 {
+    text-align: center;
+    margin: 0;
+    line-height: 2em;
+    color: #FFF;
+    background: #3dce3d;
+}
+ul{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+.clearfix{
+	zoom: 1;
+}
+
+.kind-nav li{
+	float: left;
+	padding: 5px 12px;
+}
+.list-box .data-li{
+    clear: both;
+    height: 74px;
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-image: -webkit-linear-gradient(bottom,#efefef,#efefef 50%,transparent 50%,transparent) 100% 1;
+    border-image: linear-gradient(to top,#efefef,#efefef 50%,transparent 50%,transparent) 100% 1;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 11px 15px 8px;
+}
+.data-li img{
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	float: left;
+}
+.data-li img.code{
+	width: auto;
+	height: auto;
+	position: absolute;
+	right: 15px;
+	margin-top: 19px;
+}
+.data-li img.largeCode{
+	position: fixed;
+	width: 50%;
+	left: 25%;
+	display: none;
+}
+.data-li .app-content{
+	-webkit-box-flex: 1;
+    margin: 0 15px;
+    float: left;
+     width: 65%; 
+    max-width: 75%;
+}
+.data-li h3{
+	margin: 0;
+}
+.data-li p{
+	line-height: 1.5em;
+	margin: 0;
+}
+.data-li .appinfo{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+button.btn{
+    margin-top: 14px;
+    width: 51px;
+    height: 26px;
+    line-height: 28px;
+    font-size: 14px;
+    border-radius: 2px;
+    position: absolute;
+    right: 37px;
+    text-align: center;
+    border: none;
+}
+.btn-green{
+	background-color: #3dce3d;
+	color: #FFF;
+}
+.kind-nav{
+	position: relative;
+}
+.kind-nav ul{
+	width: 98%;
+	height: 30px;
+	overflow: hidden;
+}
+.kind-nav ul.active{
+	height: auto;
+	overflow: visible;
+}
+.kind-nav .btn-more{
+	position: absolute;
+	right:15px;
+	top:4px;
+	margin: 0;
+}
+
+.large{
+    position: fixed;
+    background-color: #000;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none;
+}
+.large img{
+	width: 60%;
+	height: auto;
+}
+.large.active{
+	display: inline-block;
+}
