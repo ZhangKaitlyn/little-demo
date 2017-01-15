@@ -4,15 +4,17 @@ html,body{
 body{
 	display: inline-block;
 	width: 100%;
+	font-family: "思源黑体",Rebot,"PingFang SC","SF UI Display";
 }
-p{
+p,body{
 	margin: 0;
 }
-header h2 {
+header h3 {
     text-align: center;
     margin: 0;
     line-height: 2em;
     color: #FFF;
+    font-size: 18px;
     background: #3dce3d;
 }
 ul{
@@ -51,6 +53,7 @@ ul{
 	height: 50px;
 	object-fit: cover;
 	float: left;
+	margin-top: 12px;
 }
 .data-li img.code{
 	width: auto;
@@ -74,10 +77,12 @@ ul{
 }
 .data-li h3{
 	margin: 0;
+	font-size: 16px;
 }
 .data-li p{
 	line-height: 1.5em;
 	margin: 0;
+	font-size: 14px;
 }
 .data-li .appinfo{
 	text-overflow: ellipsis;
@@ -85,14 +90,14 @@ ul{
 	overflow: hidden;
 }
 button.btn{
-    margin-top: 14px;
+    margin-top: 20px;
     width: 51px;
     height: 26px;
     line-height: 28px;
     font-size: 14px;
     border-radius: 2px;
     position: absolute;
-    right: 37px;
+    right: 15px;
     text-align: center;
     border: none;
 }
@@ -134,5 +139,16 @@ button.btn{
 	height: auto;
 }
 .large.active{
+	display: inline-block;
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.63);
+    top: 0;
+    display: none;
+}
+.mask.active{
 	display: inline-block;
 }

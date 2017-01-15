@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header>
-		<h2>小程序商店</h2>
+		<h3>小程序商店</h3>
 	</header>
 
 	<!-- <nav class="kind-nav">
@@ -42,8 +42,7 @@
 					<p class="appinfo">为情侣们提供两人间的私密清单，将你们美好的爱情记录其中</p>
 					<p class="c-tx1">5213人使用<span> ・  </span>工具</p>
 				</div>
-				<button class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="恋人清单1">复制</button>
-				<img data-url="1.jpg" src="images/QRCode.png" alt="二维码" class="code">	
+				<button data-url="1.jpg" class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="恋人清单1">打开</button>
 			</li>
 			<li class="data-li" data-appid="VWGAepsb7L5488q2rMMz6A">
 				<img src="images/727_1484201163.jpg" alt="恋人清单">
@@ -52,8 +51,7 @@
 					<p class="appinfo">为情侣们提供两人间的私密清单，将你们美好的爱情记录其中</p>
 					<p class="c-tx1">5213人使用<span> ・  </span>工具</p>
 				</div>
-				<button class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="恋人清单2">复制</button>
-				<img  data-url="1.jpg" src="images/QRCode.png" alt="二维码" class="code">	
+				<button data-url="1.jpg" class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="恋人清单2">打开</button>
 			</li>
 			<li class="data-li" data-appid="VWGAepsb7L5488q2rMMz6A">
 				<img src="images/727_1484201163.jpg" alt="恋人清单">
@@ -62,12 +60,12 @@
 					<p class="appinfo">为情侣们提供两人间的私密清单，将你们美好的爱情记录其中</p>
 					<p class="c-tx1">5213人使用<span> ・  </span>工具</p>
 				</div>
-				<button class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="恋人清单3">复制</button>
-				<img  data-url="1.jpg" src="images/QRCode.png" alt="二维码" class="code">	
+				<button data-url="1.jpg" class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="恋人清单3">打开</button>
 			</li>
 		</ul>
 	</div>
 
+	<div id="js-mask" class="mask"></div>
 	<div id="js-large-code" class="large">
 		<img src="images/1.jpg" alt="二维码">
 	</div>
@@ -93,13 +91,14 @@
 	<script>
 		var listBox=document.getElementById('js-list');
 		listBox.onclick=function(e){
-			// e.stopPropagation();
 			var obj=e.target;
-			if (hasClass(obj,'code')) {
+			if (hasClass(obj,'clip-btn')) {
 				var parent=document.getElementById('js-large-code');
 				var url=obj.dataset.url;
 				var img="<img src='images/"+url+"' alt='二维码'>";
 				parent.innerHTML=img;
+				var mask=document.getElementById('js-mask');
+				addClass(mask,"active");
 				addClass(parent,"active");
 			}else{
 				console.log("无二维码");
@@ -108,9 +107,11 @@
 
 		document.body.onclick=function(e){
 			var obj=e.target;
-			if (!hasClass(obj,'code')){
+			if (!hasClass(obj,'clip-btn')){
 				var large=document.getElementById('js-large-code');
 				if (hasClass(large,'active')) {
+					var mask=document.getElementById('js-mask');
+					removeClass(mask,'active');
 					removeClass(large,'active');
 				}
 			}
