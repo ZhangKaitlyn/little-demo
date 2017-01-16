@@ -8,6 +8,7 @@ body{
 }
 p,body{
 	margin: 0;
+    color: #3D464D;
 }
 header h3 {
     text-align: center;
@@ -37,8 +38,8 @@ ul{
 	padding: 5px 12px;
 }
 .kind-nav li.active{
-    background-color: #3DCE3D;
-    color: #FFF;
+    /*background-color: #3DCE3D;*/
+    color: #222;
 }
 .list-box .data-li{
     clear: both;
@@ -80,13 +81,16 @@ ul{
     max-width: 75%;
 }
 .data-li h3{
-	margin: 0 0 10px;
-	font-size: 16px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #333;
+    font-weight: lighter;
 }
 .data-li p{
 	line-height: 1.5em;
 	margin: 0;
-	font-size: 14px;
+	font-size: 13px;
+	color: #3D464D;
 }
 .data-li .appinfo{
 	text-overflow: ellipsis;
