@@ -1,9 +1,10 @@
 var moreBtn=document.getElementById('js-more');
-var listBox=document.getElementById('js-listBox');
+var nav=document.getElementById('js-nav');
 moreBtn.onclick=function(){
-	if (hasClass(listBox,'active')) {
-		removeClass(listBox,'active');
+	console.log(nav);
+	if (hasClass(nav,'active')) {
+		removeClass(nav,'active');
 	}else{
-		addClass(listBox,'active');
+		addClass(nav,'active');
 	}
 }
