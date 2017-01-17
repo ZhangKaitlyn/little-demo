@@ -1,0 +1,140 @@
+CREATE TABLE `little_demo`.`demos` ( 
+	`id` INT NOT NULL AUTO_INCREMENT , 
+	`name` VARCHAR(20) NOT NULL , 
+	`logo` VARCHAR(200) NOT NULL , 
+	`img_code` VARCHAR(200) NOT NULL , 
+	`detail` VARCHAR(300) NOT NULL , 
+	`kind` VARCHAR(6) NOT NULL , 
+	PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
+
+INSERT
+INTO
+  `demos`(
+    `name`,
+    `logo`,
+    `img_code`,
+    `detail`,
+    `kind`
+  )
+VALUES(
+  '滴滴出行DIDI',
+  'images/code/didi.jpg',
+  'images/code/didi_code.png',
+  '滴滴出行为您提供滴滴快车服务，经济又舒适',
+  '交通'
+),(
+  '摩拜单车',
+  'images/code/moby.jpg',
+  'images/code/moby_code.jpg',
+  '扫码即可骑走的共享单车',
+  '交通'
+),(
+  '携程酒店机票火车票',
+  'images/code/xiecheng.jpg',
+  'images/code/xiecheng_code.jpg',
+  '提供酒店、机票、火车票、门票预订服务',
+  '交通'
+),(
+  '去哪儿出行',
+  'images/code/qunaer.jpg',
+  'images/code/qunaer_code.png',
+  '光速抢票，极速出票，免登录，可预约',
+  '交通'
+),(
+  '车来了',
+  'images/code/chelaile.jpg',
+  'images/code/chelaile_code.jpg',
+  '快速查询公交信息，精准获得到站时间！',
+  '交通'
+),(
+  '艺龙酒店预订',
+  'images/code/yilong.jpg',
+  'images/code/yilong_code.jpg',
+  '让您选的省心、订的放心、住的舒心',
+  '交通'
+),(
+  '美团外卖+',
+  'images/code/meituanwaimai.jpg',
+  'images/code/meituanwaimai_code.jpg',
+  '美团外卖，送啥都快',
+  '生活'
+),(
+  '饿了么外卖服务',
+  'images/code/eleme.jpg',
+  'images/code/eleme_code.jpg',
+  '中国知名的在线外卖订餐平台',
+  '生活'
+),(
+  '58同城',
+  'images/code/58tongcheng.jpg',
+  'images/code/58tongcheng_code.jpg',
+  '找工作找房子、买二手买宠物，都在58同城',
+  '生活'
+),(
+  '随手记',
+  'images/code/suishouji.jpg',
+  'images/code/suishouji_code.jpg',
+  '随手记账，随手算账，记多人账',
+  '生活'
+),(
+  '京东购物',
+  'images/code/jd.jpg',
+  'images/code/jd_code.jpg',
+  '京东APP是一款多功能移动购物软件',
+  '购物'
+),(
+  '值得买京东优选',
+  'images/code/jdyouxuan.jpg',
+  'images/code/jdyouxuan_code.png',
+  '推荐京东商城最值得买的商品。',
+  '购物'
+),(
+  '小密圈+',
+  'images/code/miquan.jpg',
+  'images/code/miquan_code.jpg',
+  '高品质社群，实现知识变现的工具',
+  '社区'
+),(
+  '微快递+',
+  'images/code/weikuaidi.jpg',
+  'images/code/weikuaidi_code.jpg',
+  '一款最全查快递工具',
+  '购物'
+),(
+  '金山词霸',
+  'images/code/jinshanciba.jpg',
+  'images/code/jinshanciba_code.jpg',
+  '经典的翻译软件',
+  '学习'
+),(
+  'ZTodo',
+  'images/code/ZTodo.jpg',
+  'images/code/ZTodo_code.jpg',
+  '一个轻量的todolist应用',
+  '生活'
+),(
+  '蘑菇街',
+  'images/code/mogujie.jpg',
+  'images/code/mogujie_code.jpg',
+  '做你的专属时尚搭配师',
+  '购物'
+),(
+  '分答快问',
+  'images/code/fenda.jpg',
+  'images/code/fenda_code.jpg',
+  '聚集了付费语音问答平台上的优质答主。',
+  '社区'
+),(
+  '轻芒杂志',
+  'images/code/qingmang.jpg',
+  'images/code/qingmang_code.jpg',
+  '涵盖所有生活领域的精选兴趣杂志',
+  '阅读'
+),(
+  '得到 plus',
+  'images/code/dedao.jpg',
+  'images/code/dedao_code.jpg',
+  '每天提供高质量的知识新闻和书籍精华',
+  '阅读'
+);
