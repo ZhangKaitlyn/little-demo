@@ -14,7 +14,7 @@ class MMysql {
     protected $_host = 'localhost';
 	protected $_port = 3306;
     protected $_user = 'root';
-    protected $_pass = '';
+    protected $_pass = 'rzq1314520';
     protected $_dbName = 'little_demo'; //数据库名
 	protected $_sql = false; //最后一条sql语句
     protected $_where = '';
