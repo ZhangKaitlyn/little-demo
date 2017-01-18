@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header>
-		<a href="#" class="publish">+发布</a>
+		<a href="templates/publish.html" class="publish">+发布</a>
 		<span>程序商店</span>
 		<span class="search"><img src="images/search.png" alt="搜索"></span>
 	</header>
