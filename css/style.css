@@ -6,9 +6,18 @@ body{
 	width: 100%;
 	font-family: "思源黑体",Rebot,"PingFang SC","SF UI Display","黑体";
 }
+img{
+	width: 100%;
+	height: auto;
+}
 p,body{
 	margin: 0;
 	color: #3D464D;
+}
+a{
+	color: #333;
+	text-decoration: none;
+	font-size: 14px;
 }
 header h3 {
 	text-align: center;
@@ -33,26 +42,77 @@ ul{
 	zoom: 1;
 }
 
+header{
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	padding: 0 16px;
+}
+a.publish{
+	float: left;
+	font-size: 1
+}
+span.search{
+	width: 16px;
+	display: inline-block;
+	float: right;
+}
+.banner{
+	background: url("../images/0.jpg") 50% 50% no-repeat;
+	min-height: 200px;
+	background-size: cover;
+	position: relative;
+	color: #FFF;
+	text-align: center;
+}
+.masker{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+}
+.content{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	-webkit-transform: translate(0,-50%);
+	-ms-transform: translate(0,-50%);
+	transform: translate(0,-50%);
+}
+.content h3{
+    font-size: 20px;
+    margin: 0;
+    line-height: 3em;
+}
+.content p{
+	color: #FFF;
+}
+.banner img{
+	max-height: 200px;
+	object-fit: cover;
+}
 .kind-nav li{
 	float: left;
-	padding: 5px 12px;
+	padding: 0 12px;
+	font-size: 13px;
 }
 .kind-nav li.active{
-	/*background-color: #3DCE3D;*/
-	color: #222;
+	color: #3DCE3D;
+	font-size: 15px;
 }
 .list-box{
-	padding: 0 15px;
+	background-color: #f3f3f3;
 }
 .list-box .data-li{
-	width: 100%;
 	display: flex;
 	display: -webkit-flex;
 	-webkit-flex-flow:row;
 	flex-flow: row;
 	margin: 0 auto;
-	border-bottom: .5px solid #f0f0f0;
-	    padding: 8px 0;
+	padding: 8px 12px;
+	margin: 8px 0;
+	background-color: #FFF;
 }
 a.icon-60{
 	width: 60px;
@@ -125,22 +185,25 @@ a.btn{
 	display: block;
 	line-height: 27px;
 	font-size: 12px;
-	color: #fff;
 }
 .btn-green{
 	background-color: #3dce3d;
 	color: #FFF;
 }
+.btn-green-outline{
+	background-color: transparent;
+	color: #3dce3d;
+	border: 1px solid;
+}
+
 .kind-nav{
-	position: fixed;
 	background-color: #FFF;
-	z-index: 1;
-	left: 0;
-	right: 0;
+	position: relative;
 }
 .kind-nav ul{
 	width: 98%;
 	height: 30px;
+	line-height: 30px;
 	overflow: hidden;
 }
 .kind-nav ul.active{
@@ -149,9 +212,10 @@ a.btn{
 }
 .kind-nav .btn-more{
 	position: absolute;
-	right:15px;
-	top:4px;
+	right:10px;
+	top:6px;
 	margin: 0;
+	width: 16px;
 }
 
 .large{
@@ -170,9 +234,9 @@ a.btn{
 	height: auto;
 }
 .large h4{
-    margin: 15px;
-    font-weight: lighter;
-    font-size: 18px;
+	margin: 15px;
+	font-weight: lighter;
+	font-size: 18px;
 }
 .large p{
 	font-size: 12px;
@@ -193,5 +257,6 @@ a.btn{
 	display: inline-block;
 }
 .container{
-	margin-top: 12px;
+	padding-top: 1px;
+	background-color: #f3f3f3;
 }

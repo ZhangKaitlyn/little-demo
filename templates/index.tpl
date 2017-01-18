@@ -4,18 +4,51 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>小程序商店</title>
+	<title>程序商店|5G在线</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- <nav class="kind-nav">
+	<header>
+		<a href="#" class="publish">+发布</a>
+		<span>程序商店</span>
+		<span class="search"><img src="images/search.png" alt="搜索"></span>
+	</header>
+	<div class="banner">
+		<div class="masker"></div>
+		<div class="content">
+			<h3>5G在线</h3>
+			<p>总有惊喜在身边</p>
+		</div>
+	</div>
+	<nav class="kind-nav">
 		<ul class="clearfix" id="js-nav">
-			<li class="active">全部</li>
+			<li class="active">精选</li>
+			<li>旅游</li>
+			<li>生活</li>
+			<li>购物</li>
+			<li>教育</li>
+			<li>儿童</li>
+			<li>社交</li>
+			<li>阅读</li>
+			<li>新闻</li>
+			<li>娱乐</li>
+			<li>健康医疗</li>
+			<li>摄影与录像</li>
+			<li>财务</li>
+			<li>商业指南</li>
+			<li>公益</li>
+			<li>效率</li>
+			<li>音乐</li>
+			<li>工具</li>
+			<li>报刊杂志</li>
+			<li>体育</li>
+			<li>天气</li>
+			<li>其他</li>
 		</ul>
 		<a id="js-more" class="btn btn-more">
 			<img src="images/more_unfold.png" alt="">
 		</a>
-	</nav> -->
+	</nav>
 	<div class="container">
 		<ul class="list-box" id="js-list">
 			{foreach from=$demos item=item key=key name=name}
@@ -26,11 +59,11 @@
 				<div class="app-content">
 					<h3>{$item.name}</h3>
 					<p class="click-info">
-						<span>100</span>次点击
+						<span>100次点击</span> | <span>娱乐</span>
 					</p>
 					<p class="appinfo">{$item.detail}</p>
 				</div>
-				<a data-url="{$item.img_code}" class="btn btn-green clip-btn" data-clipboard-action="copy" data-clipboard-text="{$item.name}">打开</a>
+				<a data-url="{$item.img_code}" class="btn btn-green-outline clip-btn" data-clipboard-action="copy" data-clipboard-text="{$item.name}">打开</a>
 			</li>
 			{/foreach}
 		</ul>
@@ -41,7 +74,7 @@
 	</div>
 	<script src="script/common.js"></script>
 	<script src="script/clipboard.min.js"></script>
-	<!-- <script src="script/toggle.js"></script> -->
+	<script src="script/toggle.js"></script>
 	<script>
 		var clipboard=new Clipboard(".clip-btn");
 		clipboard.on('success', function(e) {
