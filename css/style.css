@@ -107,7 +107,7 @@ span.search{
 .list-box{
 	background-color: #f3f3f3;
 }
-.list-box .data-li{
+.data-li{
 	display: flex;
 	display: -webkit-flex;
 	-webkit-flex-flow:row;
@@ -125,7 +125,7 @@ a.icon-60{
 	margin-right: 14px;
 	position: relative;
 }
-.icon-60:before {
+.icon-60:before ,.icon-90:before{
 	position: absolute;
 	content: "";
 	border-radius: 12px;
@@ -135,6 +135,14 @@ a.icon-60{
 	pointer-events: none;
 	display: block;
 	box-sizing: border-box;
+}
+a.icon-90{
+	width: 90px;
+	height: 90px;
+	border-radius: 12px;
+	overflow: hidden;
+	margin-right: 14px;
+	position: relative;
 }
 .data-li img{
 	width: 100%;
@@ -308,11 +316,16 @@ a.icon-60{
 	box-sizing: border-box;
 	border: 1px solid #ccc;
 }
-.form-group .kinds span{
+.form-group .kinds li{
 	padding: 6px 12px;
 	margin: 5px 0;
 	border: 1px solid #ccc;
 	display: inline-block;
+}
+.form-group .kinds li.active{
+    background-color: #3DCE3D;
+    color: #FFF;
+    border: 1px solid #3DCE3D;
 }
 .publish-form h4{
 	line-height: 2em;
