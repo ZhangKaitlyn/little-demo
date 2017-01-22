@@ -53,11 +53,11 @@
 		<ul class="list-box" id="js-list">
 			{foreach from=$demos item=item key=key name=name}
 			<li class="data-li">
-				<a href="javascript:void(0);" class="icon-60">
+				<a href="detail.php?name={$item.name}" class="icon-60">
 					<img src="{$item.logo}" alt="{$item.name}">
 				</a>
 				<div class="app-content">
-					<h3>{$item.name}</h3>
+					<h3><a href="detail.php?name={$item.name}">{$item.name}</a></h3>
 					<p class="click-info">
 						<span>100次点击</span> | <span>娱乐</span>
 					</p>
