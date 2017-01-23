@@ -53,7 +53,7 @@
 		<ul class="list-box" id="js-list">
 			{foreach from=$demos item=item key=key name=name}
 			<li class="data-li">
-				<a href="detail.php?name={$item.name}" class="icon-60">
+				<a href="http://www.baidu.com" class="icon-60">
 					<img src="{$item.logo}" alt="{$item.name}">
 				</a>
 				<div class="app-content">

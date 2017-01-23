@@ -8,11 +8,8 @@ $smarty = new Smarty;
 $mysql=new MMysql();
 
 $name=$_GET['name'];
-var_dump($name);
+$detail=$mysql->where(array('name'=>"58同城"))->select('demos');
 
-// $demos = $mysql->select('demos');
-// // var_dump($demos);
-// $smarty->assign("demos",$demos);
-$smarty->assign('name',$name);
+$smarty->assign('detail',$detail);
 
 $smarty->display('detail.tpl');

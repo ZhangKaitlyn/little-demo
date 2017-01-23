@@ -246,7 +246,7 @@ class MMysql {
                 }
                 else {
                     $logic = 'and';
-                    $condition = ' ('.$this->_addChar($k).'='.$v.') ';
+                    $condition = ' ('.$this->_addChar($k).'=\''.$v.'\') ';
                 }
                 $this->_where .= isset($mark) ? $logic.$condition : $condition;
                 $mark = 1;

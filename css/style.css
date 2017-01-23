@@ -275,7 +275,7 @@ a.icon-70{
 	padding-top: 1px;
 	background-color: #f3f3f3;
 	position: relative;
-	z-index: -1;
+	/*z-index: -1;导致a不可点击*/
 }
 
 .form-group{
