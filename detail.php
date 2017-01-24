@@ -8,7 +8,7 @@ $smarty = new Smarty;
 $mysql=new MMysql();
 
 $name=$_GET['name'];
-$detail=$mysql->where(array('name'=>"58同城"))->select('demos');
+$detail=$mysql->where(array('name'=>$name))->select('demos');
 
 $smarty->assign('detail',$detail);
 

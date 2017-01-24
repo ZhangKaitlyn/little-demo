@@ -11,36 +11,38 @@
 <body class="bottom-fixed">
 	<div class="data-li top-info">
 		<a href="javascript:void(0);" class="icon-70">
-			<img src="images/code/moby.jpg" alt="摩拜单车">
+			<img src="{$detail[0].logo}" alt="{$detail[0].name}">
 		</a>
 		<div class="app-content">
-			<h4>摩拜单车</h4>
+			<h4>{$detail[0].name}</h4>
 			<p class="click-info">
-				<span>100次点击</span> | <span>娱乐</span>
+				<span>100次点击</span> | <span>{$detail[0].kind}</span>
 			</p>
-			<p class="appinfo">厦门大仙愉快哈高科</p>
+			<p class="appinfo">{$detail[0].detail}</p>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
-			<h4>摩拜单车 介绍</h4>
-			<p>说的了刚好客户的可可可可建军节建军节建军节的反馈结果看见个哦人品好</p>
+			<h4>{$detail[0].name} 介绍</h4>
+			<p>{$detail[0].detail}</p>
 		</div>
 		<div class="row">
-			<h4>摩拜单车 截图</h4>
+			<h4>{$detail[0].name} 截图</h4>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="images/code/moby_scrs.jpg" alt="摩拜单车截图"></div>
-					<div class="swiper-slide"><img src="images/code/moby_scrs.jpg" alt="摩拜单车截图"></div>
-					<div class="swiper-slide"><img src="images/code/moby_scrs.jpg" alt="摩拜单车截图"></div>
+					{foreach from=$detail[0].screenshots item=item}
+					<div class="swiper-slide"><img src="{$item}" alt="{$detail[0].name}截图"></div>
+					{/foreach}
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<h4>摩拜单车 使用指南</h4>
-			<p class="info">*长按复制名称(<span> 摩拜单车 </span>)，微信（6.5.3版本+）搜索</p>
+			<h4>{$detail[0].name} 使用指南</h4>
+			<p class="info">*长按复制名称(<span> {$detail[0].name} </span>)，微信（6.5.3版本+）搜索</p>
+			{if $detail[0].gong_code}
 			<p>*长按进入公众号，直接使用小程序</p>
-			<img class="code" src="images/code/moby_code.jpg" alt="摩拜单车">
+			<img class="code" src="{$detail[0].gong_code}" alt="{$detail[0].name}">
+			{/if}
 		</div>
 		<div class="row clearfix">
 			<h4>热门推荐</h4>
@@ -68,7 +70,7 @@
 	</div>
 
 	<div class="footer">
-		<a id="js-bottom-modal" data-url="images/code/miquan_code.jpg" class="btn btn-green-outline clip-btn btn-full" data-clipboard-action="copy" data-clipboard-text="密圈+">打开</a>
+		<a id="js-bottom-modal" data-url="{$detail[0].img_code}" class="btn btn-green-outline clip-btn btn-full" data-clipboard-action="copy" data-clipboard-text="{$detail[0].name}">打开</a>
 	</div>
 	
 	<div id="js-mask" class="mask"></div>
