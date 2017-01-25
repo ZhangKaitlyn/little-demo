@@ -1,4 +1,9 @@
 <?php
+$appId=$_GET['appId'];
+$appSecret=$_GET['appSecret'];
+$jssdk = new JSSDK($appId, $appSecret);
+$signPackage = $jssdk->GetSignPackage();
+echo json_encode($signPackage);
 class JSSDK {
   private $appId;
   private $appSecret;
@@ -29,9 +34,11 @@ class JSSDK {
       "timestamp" => $timestamp,
       "url"       => $url,
       "signature" => $signature,
-      "rawString" => $string
+      "rawString" => $string,
+      "jsapiTicket"=>$jsapiTicket,
+      "str"=>$string
     );
-    return $signPackage; 
+    return $signPackage;
   }
 
   private function createNonceStr($length = 16) {
