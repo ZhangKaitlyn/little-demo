@@ -90,13 +90,20 @@ $signPackage = $jssdk->GetSignPackage();
 			timestamp: <?php echo $signPackage["timestamp"];?>,
 			nonceStr: '<?php echo $signPackage["nonceStr"];?>',
 			signature: '<?php echo $signPackage["signature"];?>',
-			jsApiList: [
-      // 所有要调用的 API 都要加到这个列表中
-      ]
-  });
-		wx.ready(function () {
-    // 在这里调用 API
-});
-</script>
+			jsApiList: ["chooseImage","uploadImage"]
+		});
+		$(".upload").on("click",function(){
+			wx.chooseImage({
+		        count: 1, // 默认9
+		        sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+		        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+		        success: function (res) {
+		            var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+		            console.log(localIds);
+		        }
+		    });
+		})
+		
+	</script>
 </body>
 </html>
